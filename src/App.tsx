@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 /* eslint-disable max-len */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 
 import Highlighter from 'react-highlight-words';
