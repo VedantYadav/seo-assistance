@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const apiCall = async (url: string, text: string): Promise<any> => {
   const response = await fetch(url, {
     method: 'POST',
