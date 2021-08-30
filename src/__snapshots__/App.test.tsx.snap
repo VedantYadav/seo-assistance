@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a App snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-18fcrwx"
+  >
+    <h3>
+      SEO Assistance
+    </h3>
+    <section>
+      <div>
+        <textarea
+          class="css-1clib4d"
+          id="w3review"
+          name="w3review"
+          placeholder="Type Article Text Here..."
+          rows="20"
+        />
+      </div>
+      <div>
+        <button
+          class="css-vryajb"
+        >
+          Check Interlinked Articles
+        </button>
+        <button
+          class="css-k8smvf"
+        >
+          Analyse Text
+        </button>
+      </div>
+    </section>
+    <section>
+      <div
+        class="css-gf1ptx"
+      >
+        <div />
+      </div>
+    </section>
+    <div
+      class="css-gf1ptx"
+    />
+  </div>
+</DocumentFragment>
+`;
