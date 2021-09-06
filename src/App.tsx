@@ -34,14 +34,14 @@ export const App: React.FC = () => {
   };
   */
   const fetchInterlinkedArticles = async (): Promise<void> => {
-    const responseLink = await apiCall('https://seo-http-server.dev.seo-interlinking.br-dev.de/predict', text);
+    const responseLink = await apiCall('https://seo-pages-interlinking.dev.seo-interlinking.br-dev.de/predict', text);
     setLinks(responseLink);
     setWordsToHighlight(responseLink.map((x: any) => x.sentence));
     setShow(false);
   };
 
   const fetchTags = async (): Promise<void> => {
-    const responseTags = await apiCall('https://seo-http-server.dev.seo-ml.br-dev.de/predict', text);
+    const responseTags = await apiCall('https://seo-keyword-suggestion.dev.seo-ml.br-dev.de/predict', text);
     setTags(responseTags);
     setWordsToHighlight(responseTags.map((x: any) => x.tag));
     setShow(false);
