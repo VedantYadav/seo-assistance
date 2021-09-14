@@ -53,7 +53,7 @@ export const Tags: React.FC = () => {
     return () => {
       // cleanup;
     };
-  }, []);
+  });
 
   return (
     <>

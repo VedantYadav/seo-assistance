@@ -53,7 +53,7 @@ export const Interlink: React.FC = () => {
     return () => {
       // cleanup;
     };
-  }, []);
+  });
 
   return (
     <>
