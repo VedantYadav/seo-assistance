@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable camelcase */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from 'react';
 
 import styled from '@emotion/styled';

@@ -20,27 +20,17 @@ exports[`should take a App snapshot 1`] = `
       </div>
       <div>
         <button
-          class="css-vryajb"
+          class="css-pe5txd"
         >
           Check Interlinked Articles
         </button>
         <button
-          class="css-k8smvf"
+          class="css-2yettk"
         >
           Analyse Text
         </button>
       </div>
     </section>
-    <section>
-      <div
-        class="css-gf1ptx"
-      >
-        <div />
-      </div>
-    </section>
-    <div
-      class="css-gf1ptx"
-    />
   </div>
 </DocumentFragment>
 `;
