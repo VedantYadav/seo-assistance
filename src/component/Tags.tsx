@@ -53,7 +53,8 @@ export const Tags: React.FC = () => {
     return () => {
       // cleanup;
     };
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
