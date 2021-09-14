@@ -9,17 +9,17 @@ const Button = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+  color: #fff;
   border: 1px solid #f0f0f0;
 `;
 
 const AnalyseTextBtn = styled(Button)`
-  background-color: #fff;
+  background-color: #000;
   margin-left: 1rem;
 `;
 
 const InterlinkedArticlesBtn = styled(Button)`
- background-color: #1990ff;
-  color: #fff;
+  background-color: #000;
 `;
 
 const TextAreaInput = styled.textarea`

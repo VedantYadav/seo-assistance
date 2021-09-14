@@ -7,8 +7,8 @@ import styled from '@emotion/styled';
 import Highlighter from 'react-highlight-words';
 import { useLocation } from 'react-router-dom';
 
-import { LinkAPIResponseType } from '../AppType';
-import { Link } from './Link';
+import * as S from '../AppStyle';
+import { TagAPIResponseType } from '../AppType';
 import { apiCall } from './Util';
 
 const HighlightText = {
@@ -32,19 +32,19 @@ export const InterLinkSection = styled.div`
   flex-direction: column;
 `;
 
-export const Interlink: React.FC = () => {
+export const Tags: React.FC = () => {
   const location = useLocation();
   const [text] = useState<any>(location.state);
-  const [link, setLinks] = useState<LinkAPIResponseType[]>([]);
+  const [tags, setTags] = useState<TagAPIResponseType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [wordsToHighlight, setWordsToHighlight] = useState<string[]>([]);
 
   const api = async (): Promise<void> => {
     setLoading(true);
-    const responseLink = await apiCall('https://seo-pages-interlinking.dev.seo-interlinking.br-dev.de/predict', text);
-    setLinks(responseLink);
+    const responseTags = await apiCall('https://seo-keyword-suggestion.dev.seo-ml.br-dev.de/predict', text);
+    setTags(responseTags);
     setLoading(false);
-    setWordsToHighlight(responseLink.map((x: any) => x.sentence));
+    setWordsToHighlight(responseTags.map((x: any) => x.tag));
   };
 
   useEffect(() => {
@@ -58,14 +58,28 @@ export const Interlink: React.FC = () => {
     <>
       {!loading && (
         <InterLinkSection>
-          <h3>SEO Interlink</h3>
+          <h3>SEO Tags</h3>
 
           <section>
             <StyledHighlighter>
               <Highlighter highlightStyle={HighlightText} searchWords={wordsToHighlight} autoEscape textToHighlight={text} />
             </StyledHighlighter>
           </section>
-          <div>{link && link.length > 0 && link.map(k => <Link {...k} />)}</div>
+
+          <S.TagsSection>
+            {tags.length > 0
+              && tags.map(({ tag, trends }) => (
+                <S.TagWrapper>
+                  <S.TagHeading key={tag}>{tag.charAt(0).toUpperCase() + tag.slice(1)}</S.TagHeading>
+                  {trends && trends.map(x => (
+                    <S.Tags>
+                    {x}
+                    {' '}
+                    </S.Tags>
+                    ))}
+                </S.TagWrapper>
+              ))}
+          </S.TagsSection>
         </InterLinkSection>
       )}
       {loading && <img src="./loading.gif" />}

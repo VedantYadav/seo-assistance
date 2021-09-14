@@ -11,12 +11,13 @@ export const TagHeading = styled.h3`
 `;
 
 export const TagsSection = styled.div`
-  display: 'flex';
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
-export const Tags = styled.span`
-  color: #1990ff;
+export const Tags = styled.li`
+  color: #000;
 `;
 
 export const HighlightText = {
@@ -37,6 +38,20 @@ export const Highlighter = styled.div`
 
 export const TagWrapper = styled.div`
   padding: 0.5rem;
-  margin: 1rem 0;
+  margin: 1rem;
+  width: 20rem;
   border: 1px solid #f0f0f0;
+`;
+
+export const Loader = styled.div`
+  position: fixed;
+  z-index: 999;
+  height: 1em;
+  width: 1em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: -70px;
+  bottom: 0;
+  right: 70px;
 `;

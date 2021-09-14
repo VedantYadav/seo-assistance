@@ -1,13 +1,22 @@
 import React from 'react';
 
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { App } from './App';
+import { Interlink } from './component/Interlink';
+import { Tags } from './component/Tags';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route path="/tags" component={Tags} />
+        <Route path="/interlink" component={Interlink} />
+        <Route path="/" component={App} />
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 );
