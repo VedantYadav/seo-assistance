@@ -31,13 +31,15 @@ export const App: React.FC = () => {
 
   return (
     <>
-      <S.AppContainer>
-        <h3>SEO Assistance</h3>
+      <div>
+        <S.AppContainer>
+          <h3>SEO Assistance</h3>
 
-        <section>
-          <TextArea fetchInterlinkedArticles={fetchInterlinkedArticles} fetchTags={fetchTags} text={text} setText={setText} />
-        </section>
-      </S.AppContainer>
+          <section>
+            <TextArea fetchInterlinkedArticles={fetchInterlinkedArticles} fetchTags={fetchTags} text={text} setText={setText} />
+          </section>
+        </S.AppContainer>
+      </div>
     </>
   );
 };

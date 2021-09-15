@@ -9,6 +9,7 @@ import Highlighter from 'react-highlight-words';
 import { useLocation } from 'react-router-dom';
 
 import * as S from '../AppStyle';
+import { Loader } from '../AppStyle';
 import { TagAPIResponseType } from '../AppType';
 import { apiCall } from './Util';
 
@@ -53,14 +54,14 @@ export const Tags: React.FC = () => {
     return () => {
       // cleanup;
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
       {!loading && (
         <InterLinkSection>
-          <h3>SEO Tags</h3>
+          <h3>Keyword Suggestion</h3>
 
           <section>
             <StyledHighlighter>
@@ -74,17 +75,21 @@ export const Tags: React.FC = () => {
                 <S.TagWrapper>
                   <S.TagHeading key={tag}>{tag.charAt(0).toUpperCase() + tag.slice(1)}</S.TagHeading>
                   {trends && trends.map(x => (
-                    <S.Tags>
-                    {x}
-                    {' '}
-                    </S.Tags>
-                    ))}
+<S.Tags>
+{x}
+{' '}
+</S.Tags>
+))}
                 </S.TagWrapper>
               ))}
           </S.TagsSection>
         </InterLinkSection>
       )}
-      {loading && <img src="./loading.gif" />}
+      {loading && (
+        <Loader>
+          <img src="./loading.gif" width="150" />
+        </Loader>
+      )}
     </>
   );
 };

@@ -2,35 +2,37 @@
 
 exports[`should take a App snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="css-18fcrwx"
-  >
-    <h3>
-      SEO Assistance
-    </h3>
-    <section>
-      <div>
-        <textarea
-          class="css-1clib4d"
-          id="w3review"
-          name="w3review"
-          placeholder="Type Article Text Here..."
-          rows="20"
-        />
-      </div>
-      <div>
-        <button
-          class="css-pe5txd"
-        >
-          Check Interlinked Articles
-        </button>
-        <button
-          class="css-2yettk"
-        >
-          Analyse Text
-        </button>
-      </div>
-    </section>
+  <div>
+    <div
+      class="css-18fcrwx"
+    >
+      <h3>
+        SEO Assistance
+      </h3>
+      <section>
+        <div>
+          <textarea
+            class="css-1clib4d"
+            id="w3review"
+            name="w3review"
+            placeholder="Type Article Text Here..."
+            rows="20"
+          />
+        </div>
+        <div>
+          <button
+            class="css-pe5txd"
+          >
+            Check Interlinked Articles
+          </button>
+          <button
+            class="css-2yettk"
+          >
+            Analyse Text
+          </button>
+        </div>
+      </section>
+    </div>
   </div>
 </DocumentFragment>
 `;

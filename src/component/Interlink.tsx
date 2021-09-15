@@ -8,6 +8,7 @@ import styled from '@emotion/styled';
 import Highlighter from 'react-highlight-words';
 import { useLocation } from 'react-router-dom';
 
+import { Loader } from '../AppStyle';
 import { LinkAPIResponseType } from '../AppType';
 import { Link } from './Link';
 import { apiCall } from './Util';
@@ -53,7 +54,7 @@ export const Interlink: React.FC = () => {
     return () => {
       // cleanup;
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -70,7 +71,11 @@ export const Interlink: React.FC = () => {
           <div>{link && link.length > 0 && link.map(k => <Link {...k} />)}</div>
         </InterLinkSection>
       )}
-      {loading && <img src="./loading.gif" />}
+      {loading && (
+        <Loader>
+          <img src="./loading.gif" width="150" />
+        </Loader>
+      )}
     </>
   );
 };
